@@ -2,7 +2,8 @@ let nextTodoId = 0
 export const addTodo = text => ({
   type: 'ADD_TODO',
   id: nextTodoId++,
-  text
+  text,
+  visible: true
 })
 
 export const setVisibilityFilter = filter => ({
@@ -18,6 +19,11 @@ export const toggleTodo = id => ({
 export const removeTodo = id => ({
   type: 'REMOVE_TODO',
   id
+})
+
+export const searchTodo = text => ({
+  type: 'SEARCH_TODO',
+  text
 })
 
 export const VisibilityFilters = {
